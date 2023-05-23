@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fake News Detection</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<style> 
+		body {
+			background-image: url("https://i.postimg.cc/hPQnbPrw/bg.jpg");
+			background-size: cover;
+			background-color: #cccccc;
+
+			font-family: 'Roboto', sans-serif;
+			color: #ccc;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 30px;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 10px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			border: none;
+			width: 100%;
+			background-color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			color: #000;
+		}
+
+		button[type="submit"] {
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			width: 70%;
+			background-color: #0066cc;
+			font-size: 16px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #0052a3;
+		}
+
+		button[type="button"] {
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			width: 100%;
+			background-color: #d9534f;
+			font-size: 16px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		button[type="button"]:hover {
+			background-color: #c9302c;
+		}
+
+		h4 {
+			font-size: 10px;
+			text-align: center;
+			margin-bottom: 2px;
+		}
+		h3 {
+			font-size: 16px;
+			text-align: left;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Predict Fake News</h1>
+	<p style="text-align:left;">Model1 represents TF-IDF followed by Multinomial Naive Bayes and Model2 represents Count Vectorizer followed by Multinomial Naive Bayes. 
+	<br> Count Vectorizer and TF-IDF are two ways of turning words into numbers that a computer can understand.</br> Count Vectorizer simply counts the frequency of each word in a document and represents each document as a vector of word frequencies. With TF-IDF, we do the same thing, but we also think about how often a word appears across all the sentences or documents we're looking at. If a word is really rare and only appears in a few sentences, we give it a higher number. If it's really common and appears in almost all the sentences, we give it a lower number.<br> Multinomial Naive Bayes is a way to teach a computer to automatically determine the credibility of news articles based on the words used in the article. It first analyzes the training data to identify patterns as “Fake” or “Real” and then classify new articles based on the patterns it already learned.</br>
+     </p>
+	<br><button onclick="history.back() || window.location.replace('http://127.0.0.1:5000/'); document.getElementById('inputField').value='';"> <b>Back</b> </button></br>
+	</div>
+
+</body>
+</html>
